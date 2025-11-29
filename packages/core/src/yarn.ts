@@ -30,7 +30,7 @@ const queues = {
 
 export async function runYarnCmd(
   args: string[],
-  { directory }: { directory: string }
+  { directory }: { directory: string },
 ) {
   return exec("yarn", args, {
     cwd: directory,
@@ -76,7 +76,11 @@ export async function addYarnPlugin({
   directory: string;
   name: string;
 }) {
-  await runYarnCmd(["plugin", "import", name], { directory });
+  const currentPlugins = await getYarnPlugins({ directory });
+
+  if (!currentPlugins.includes(name)) {
+    await runYarnCmd(["plugin", "import", name], { directory });
+  }
 }
 
 export async function removeYarnPlugin({
@@ -87,6 +91,26 @@ export async function removeYarnPlugin({
   name: string;
 }) {
   await runYarnCmd(["plugin", "remove", name], { directory });
+}
+
+export async function getYarnPlugins({ directory }: { directory: string }) {
+  const { stdout } = await runYarnCmd(["plugin", "runtime", "--json"], {
+    directory,
+  });
+
+  return stdout.split("\n").reduce((acc, line) => {
+    try {
+      const { name } = JSON.parse(line);
+
+      if (name !== "@@core") {
+        return [...acc, name.replace("@yarnpkg/plugin-", "")];
+      }
+    } catch {
+      // ignore
+    }
+
+    return acc;
+  }, [] as string[]);
 }
 
 export async function installDependency({

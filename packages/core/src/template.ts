@@ -5,21 +5,28 @@ export type TemplateArgs = { directory: string };
 
 export type Template = {
   type: PluginType;
+  interactive?: boolean;
   apply: (args: TemplateArgs) => Promise<void>;
 };
 
 type TemplateOptions = {
   directory: string;
   name: string;
+  beforeApply?: (template: Template) => any | Promise<any>;
+  afterApply?: (template: Template) => any | Promise<any>;
 };
 
 const CORE_TEMPLATES = [
-  "common",
-  "lib",
-  "cra",
+  "angular",
   "bandersnatch",
+  "common",
+  "cra",
   "express",
   "github-action",
+  "lib",
+  "nestjs",
+  "next",
+  "sanity",
 ];
 
 export function isTemplate(template: unknown): template is Template {
@@ -37,8 +44,9 @@ export async function importTemplate({ directory, name }: TemplateOptions) {
   let template: Template;
 
   if (CORE_TEMPLATES.includes(name)) {
-    // @ts-ignore
-    const templates: any = await import("@mokr/templates");
+    // Workaround to prevent TS5055 errors
+    const packageName = "@mokr/templates" as string;
+    const templates: any = await import(packageName);
     template = templates[toCamelCase(name) as keyof typeof templates];
   } else {
     template = await import(name);
@@ -53,8 +61,21 @@ export async function importTemplate({ directory, name }: TemplateOptions) {
   return template;
 }
 
-export async function applyTemplate({ directory, name }: TemplateOptions) {
+export async function applyTemplate({
+  directory,
+  name,
+  beforeApply,
+  afterApply,
+}: TemplateOptions) {
   const template = await importTemplate({ directory, name });
 
+  if (beforeApply) {
+    await beforeApply(template);
+  }
+
   await template.apply({ directory });
+
+  if (afterApply) {
+    await afterApply(template);
+  }
 }

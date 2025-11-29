@@ -38,7 +38,7 @@ async function install({ directory }: PluginArgs) {
       directory: monorepoDirectory,
       data: {
         scripts: {
-          test: "yarn workspaces foreach --topological --verbose run test",
+          test: "yarn workspaces foreach --all --topological --verbose run test",
         },
       },
     });

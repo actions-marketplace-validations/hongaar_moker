@@ -17,7 +17,7 @@ import {
 import os from "node:os";
 import { join } from "node:path";
 
-const PRE_COMMIT_HOOK_FILE = ".husky/pre-commit";
+const PRE_COMMIT_FILENAME = ".husky/pre-commit";
 
 async function install({ directory }: PluginArgs) {
   // Don't enqueue because we need it immediately
@@ -45,7 +45,7 @@ async function remove({ directory }: PluginArgs) {
     merge: (existingData) => {
       if (existingData.scripts?.["postinstall"] !== "husky install") {
         warning(
-          "Can't automatically remove 'husky install' from package.json, please manually review the 'postinstall' script."
+          "Can't automatically remove 'husky install' from package.json, please manually review the 'postinstall' script.",
         );
         return existingData;
       }
@@ -71,7 +71,7 @@ export const husky = {
 };
 
 function getPreCommitHookPath({ directory }: PluginArgs) {
-  return join(directory, PRE_COMMIT_HOOK_FILE);
+  return join(directory, PRE_COMMIT_FILENAME);
 }
 
 async function getPreCommitHookCommands({ directory }: PluginArgs) {
@@ -121,8 +121,9 @@ export async function addPreCommitHookCommand({
     return;
   }
 
-  await exec("yarn", ["husky", "add", PRE_COMMIT_HOOK_FILE, `"${command}"`], {
-    cwd: directory,
+  await setPreCommitHookCommands({
+    directory,
+    commands: [...(await getPreCommitHookCommands({ directory })), command],
   });
 }
 
@@ -136,18 +137,10 @@ export async function removePreCommitHookCommand({
 
   // Remove the command from the pre-commit
   const newCommands = (await getPreCommitHookCommands({ directory })).filter(
-    (line) => line !== command
+    (line) => line !== command,
   );
 
-  if (newCommands.length === 2) {
-    /**
-     * We're left with only these lines:
-     *
-     * ```
-     * #!/usr/bin/env sh
-     * . "$(dirname -- "$0")/_/husky.sh"
-     * ```
-     */
+  if (newCommands.length === 0) {
     await removeFile({ path: getPreCommitHookPath({ directory }) });
     return;
   }

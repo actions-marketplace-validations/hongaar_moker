@@ -61,12 +61,16 @@ yarn moker add --template bandersnatch cli
   - [`typescript`](#typescript)
   - [`xv`](#xv)
 - [Available templates](#available-templates)
+  - [`angular`](#angular)
   - [`bandersnatch`](#bandersnatch)
   - [`common`](#common)
   - [`cra`](#cra)
   - [`express`](#express)
   - [`github-action`](#github-action)
   - [`lib`](#lib)
+  - [`nestjs`](#nestjs)
+  - [`next`](#next)
+  - [`sanity`](#sanity)
 - [Commands](#commands)
 - [Contributing](#contributing)
   - [Roadmap](#roadmap)
@@ -80,7 +84,7 @@ yarn moker add --template bandersnatch cli
 
 ## Prerequisites
 
-You will need Node v14+ and Yarn v2+ in order to use `moker`.
+You will need Node v18+ and Yarn v2+ in order to use `moker`.
 
 - Install Node with [nvm](https://github.com/nvm-sh/nvm#install--update-script)
   or using [nodesource](https://github.com/nodesource/distributions#debinstall).
@@ -369,10 +373,8 @@ this by setting the `private` property in `package.json` to `false`.
 
 _Scope: repo or workspace_
 
-This plugin enables testing with the [test](https://www.npmjs.com/package/test)
-package, which is a port of the native
-[node:test](https://nodejs.org/api/test.html) which is only available in Node
-≥ 18. It uses [tap](https://node-tap.org) for formatting the TAP output.
+This plugin enables testing with the native
+[node --test](https://nodejs.org/api/test.html) functionality.
 
 When the `typescript` plugin is also installed, it will use
 [ts-node](https://typestrong.org/ts-node/) to load TypeScript test files.
@@ -390,9 +392,51 @@ If you have the `husky` plugin installed, it will also add a pre-commit hook.
 
 _Scope: repo or workspace_
 
+> 🧪 _Experimental_ Since v2, this plugin uses the new `--build` mode of
+> TypeScript, which makes building a lot faster but may require some additional
+> configuration.
+
 This plugin sets up [TypeScript](https://www.typescriptlang.org) and adds a
 `build` and `build:watch` script to the repo or both the workspace and the
 monorepo.
+
+In addition, this will add a `typescript` and `typescript:watch` script to the
+monorepo which can use
+[project references](https://www.typescriptlang.org/docs/handbook/project-references.html)
+to build workspaces which depend on each other faster and provides a better
+developer experience.
+
+In order to use this, add all TypeScript workspaces to `tsconfig.json` in the
+monorepo root directory:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "references": [
+    { "path": "./packages/some-library" },
+    { "path": "./packages/some-dependency" }
+  ],
+  "files": []
+}
+```
+
+And reference dependant workspaces in the workspace `tsconfig.json`:
+
+```json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "declarationDir": "types"
+  },
+  "references": [{ "path": "../some-dependency" }],
+  "include": ["src/**/*"]
+}
+```
+
+You can optionally sync project references with
+`yarn dlx @monorepo-utils/workspaces-to-typescript-project-references`.
 
 ## `xv`
 
@@ -404,6 +448,13 @@ This plugin sets up [xv](https://github.com/typicode/xv) and adds a `test`
 script to the repo or both the workspace and the monorepo.
 
 # Available templates
+
+## `angular`
+
+_Scope: workspace_
+
+Uses the [Angular CLI](https://angular.dev/tools/cli) to interactively scaffold
+an Angular app (web client).
 
 ## `bandersnatch`
 
@@ -422,7 +473,7 @@ available monorepo plugins.
 
 ## `cra`
 
-_Scope: repo or workspace_
+_Scope: workspace_
 
 Uses [create-react-app](https://create-react-app.dev/) to scaffold a React.js
 app (web client).
@@ -451,6 +502,29 @@ _Scope: repo or workspace_
 
 A plain shared library template with the [typescript](#typescript-workspace) and
 [jest](#jest-workspace) plugins.
+
+## `nestjs`
+
+_Scope: workspace_
+
+Uses the
+[TypeScript starter project](https://github.com/nestjs/typescript-starter) to
+scaffold a Nest.js server app.
+
+## `next`
+
+_Scope: workspace_
+
+Uses
+[create-next-app](https://nextjs.org/docs/pages/api-reference/create-next-app)
+to scaffold a Next.js app.
+
+## `sanity`
+
+_Scope: workspace_
+
+Uses [create-sanity](https://www.sanity.io/docs/installation) which
+interactively scaffolds a Sanity Studio package.
 
 # Commands
 

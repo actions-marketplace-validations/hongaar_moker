@@ -1,3 +1,421 @@
+# [4.3.0](https://github.com/hongaar/moker/compare/v4.2.0...v4.3.0) (2024-10-25)
+
+### Features
+
+- husky ([#367](https://github.com/hongaar/moker/issues/367))
+  ([0603773](https://github.com/hongaar/moker/commit/06037731d517f1ce55cf408cd15a6b7a6c859d80)),
+  closes
+  [/#diff-d2bc4bbf14eadc292d84e0ef5f7a93115c23557f533809fc80b896934291529dL1-L3](https://github.com///issues/diff-d2bc4bbf14eadc292d84e0ef5f7a93115c23557f533809fc80b896934291529dL1-L3)
+  [/#diff-d2bc4bbf14eadc292d84e0ef5f7a93115c23557f533809fc80b896934291529dL1-L3](https://github.com///issues/diff-d2bc4bbf14eadc292d84e0ef5f7a93115c23557f533809fc80b896934291529dL1-L3)
+  [/#diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L124-R126](https://github.com///issues/diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L124-R126)
+  [/#diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L124-R126](https://github.com///issues/diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L124-R126)
+  [/#diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L142-R143](https://github.com///issues/diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L142-R143)
+  [/#diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L142-R143](https://github.com///issues/diff-f6408bd0d6b3d60417475096443d24610f6fb92a44efd7365a1748e44119e726L142-R143)
+  [/#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L14-R15](https://github.com///issues/diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L14-R15)
+  [/#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L14-R15](https://github.com///issues/diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L14-R15)
+
+# [4.2.0](https://github.com/hongaar/moker/compare/v4.1.0...v4.2.0) (2024-10-25)
+
+### Features
+
+- nestjs ([#365](https://github.com/hongaar/moker/issues/365))
+  ([e57e956](https://github.com/hongaar/moker/commit/e57e95636af13fbbf8730a1d12fc52d9599c7c63)),
+  closes
+  [/#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R71](https://github.com///issues/diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R71)
+  [/#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R71](https://github.com///issues/diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R71)
+  [/#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5L453-R457](https://github.com///issues/diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5L453-R457)
+  [/#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5L475-R476](https://github.com///issues/diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5L475-R476)
+  [/#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R506-R524](https://github.com///issues/diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R506-R524)
+  [/#diff-5c6a1301c6b59b30a040d747d065e861d3dd98bde0e5a4356d92d594e9835986L4-R12](https://github.com///issues/diff-5c6a1301c6b59b30a040d747d065e861d3dd98bde0e5a4356d92d594e9835986L4-R12)
+  [/#diff-a00384074c972ef1fcbba57b53e443249ba635b63484b1eb1f7c4916e4339cc8R27](https://github.com///issues/diff-a00384074c972ef1fcbba57b53e443249ba635b63484b1eb1f7c4916e4339cc8R27)
+  [/#diff-e808eba3cb0d1f11d939ad3e832c543551d82e87ff0fd48759d89afcff94771fR8](https://github.com///issues/diff-e808eba3cb0d1f11d939ad3e832c543551d82e87ff0fd48759d89afcff94771fR8)
+  [/#diff-194e877e0e7ac2f869e0aa51d8b15c8005f3931802a297c74a98e3001aa2095bR1-R37](https://github.com///issues/diff-194e877e0e7ac2f869e0aa51d8b15c8005f3931802a297c74a98e3001aa2095bR1-R37)
+  [/#diff-e48f537ea43df65f2f733b68e321624fd34237257fab618884ade5c6a77ef438R17-R24](https://github.com///issues/diff-e48f537ea43df65f2f733b68e321624fd34237257fab618884ade5c6a77ef438R17-R24)
+  [/#diff-628da3ea0ff520d22fe287969fa70433369e80a5c5cca0f56155b5b3897c81b8R41-R43](https://github.com///issues/diff-628da3ea0ff520d22fe287969fa70433369e80a5c5cca0f56155b5b3897c81b8R41-R43)
+  [/#diff-07e537610a9f89af168891b69382d6a2ec4c627c83b6cb21f38edb707fb5ddb2R43-R45](https://github.com///issues/diff-07e537610a9f89af168891b69382d6a2ec4c627c83b6cb21f38edb707fb5ddb2R43-R45)
+  [/#diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R23-R30](https://github.com///issues/diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R23-R30)
+  [/#diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R23-R30](https://github.com///issues/diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R23-R30)
+  [/#diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R40-R42](https://github.com///issues/diff-7b8c2ff5e3fec4265f94f6fadba1066c1a83370bef545fe260a5fc1f71331974R40-R42)
+  [/#diff-16b5865fb81eb3b101433586384690b1108e06837f7c278eed18f01c9328ceb0R43-R45](https://github.com///issues/diff-16b5865fb81eb3b101433586384690b1108e06837f7c278eed18f01c9328ceb0R43-R45)
+
+# [4.1.0](https://github.com/hongaar/moker/compare/v4.0.0...v4.1.0) (2024-10-18)
+
+### Features
+
+- angular ([#363](https://github.com/hongaar/moker/issues/363))
+  ([5220f05](https://github.com/hongaar/moker/commit/5220f050fb8548345c94a4cda15e3ae97d09b16d))
+
+# [4.0.0](https://github.com/hongaar/moker/compare/v3.0.1...v4.0.0) (2024-10-18)
+
+- feat!: update node.js versions (#332)
+  ([cc17582](https://github.com/hongaar/moker/commit/cc17582a27f8948dc2ec1df8be0f2e3c077a3f25)),
+  closes [#332](https://github.com/hongaar/moker/issues/332)
+
+### BREAKING CHANGES
+
+- This updates the supported node.js versions
+
+Co-authored-by: hongaar <205834+hongaar@users.noreply.github.com>
+
+## [3.0.1](https://github.com/hongaar/moker/compare/v3.0.0...v3.0.1) (2024-05-27)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.15 to 2.0.0
+  ([#340](https://github.com/hongaar/moker/issues/340))
+  ([b370ab8](https://github.com/hongaar/moker/commit/b370ab8b6cf5098f4d1e544992d22f7fa5ff2a11))
+
+# [3.0.0](https://github.com/hongaar/moker/compare/v2.1.13...v3.0.0) (2024-04-25)
+
+### Features
+
+- update node.js versions ([#255](https://github.com/hongaar/moker/issues/255))
+  ([17d1042](https://github.com/hongaar/moker/commit/17d1042797eb0dab49b2ca5e4dbdb5837e6ab3f8))
+
+### BREAKING CHANGES
+
+- This updates the supported node.js versions
+
+Co-authored-by: hongaar <205834+hongaar@users.noreply.github.com>
+
+## [2.1.13](https://github.com/hongaar/moker/compare/v2.1.12...v2.1.13) (2024-04-15)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.14 to 1.12.15
+  ([#329](https://github.com/hongaar/moker/issues/329))
+  ([380d1cc](https://github.com/hongaar/moker/commit/380d1cc30205444292fdd3bc9d4f4be53aa4bac4))
+
+## [2.1.12](https://github.com/hongaar/moker/compare/v2.1.11...v2.1.12) (2024-04-11)
+
+### Bug Fixes
+
+- **deps:** bump tar from 6.1.12 to 6.2.1
+  ([#327](https://github.com/hongaar/moker/issues/327))
+  ([6c10904](https://github.com/hongaar/moker/commit/6c10904a8ecec8b421efa90add0190ade0f934f5))
+
+## [2.1.11](https://github.com/hongaar/moker/compare/v2.1.10...v2.1.11) (2024-04-01)
+
+### Bug Fixes
+
+- **deps:** bump sort-package-json from 2.8.0 to 2.10.0
+  ([#322](https://github.com/hongaar/moker/issues/322))
+  ([c136e42](https://github.com/hongaar/moker/commit/c136e42d3ade2460cf12a02158b79045721565c7))
+
+## [2.1.10](https://github.com/hongaar/moker/compare/v2.1.9...v2.1.10) (2024-03-11)
+
+### Bug Fixes
+
+- **deps:** bump yaml from 2.4.0 to 2.4.1
+  ([#315](https://github.com/hongaar/moker/issues/315))
+  ([c78ef11](https://github.com/hongaar/moker/commit/c78ef1146b8a36520d70c73f7a34b89c5cc3c795))
+
+## [2.1.9](https://github.com/hongaar/moker/compare/v2.1.8...v2.1.9) (2024-03-04)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.13 to 1.12.14
+  ([#310](https://github.com/hongaar/moker/issues/310))
+  ([1d34a22](https://github.com/hongaar/moker/commit/1d34a227bbd6f9e331240da8ce2754ec8a7cb7f1))
+- **deps:** bump sort-package-json from 2.7.0 to 2.8.0
+  ([#312](https://github.com/hongaar/moker/issues/312))
+  ([08bd839](https://github.com/hongaar/moker/commit/08bd8396ec3e88672e35e4d53992af688e236f0b))
+
+## [2.1.8](https://github.com/hongaar/moker/compare/v2.1.7...v2.1.8) (2024-02-26)
+
+### Bug Fixes
+
+- **deps:** bump yaml from 2.3.4 to 2.4.0
+  ([#311](https://github.com/hongaar/moker/issues/311))
+  ([a5374bf](https://github.com/hongaar/moker/commit/a5374bf6a1d98511841819576d4da59ab46c5f1f))
+
+## [2.1.7](https://github.com/hongaar/moker/compare/v2.1.6...v2.1.7) (2024-02-20)
+
+### Bug Fixes
+
+- **deps:** bump ip from 2.0.0 to 2.0.1
+  ([#308](https://github.com/hongaar/moker/issues/308))
+  ([91ef4ab](https://github.com/hongaar/moker/commit/91ef4ab93ce4dd176583050e2894f1ff8fbdc297))
+
+## [2.1.6](https://github.com/hongaar/moker/compare/v2.1.5...v2.1.6) (2024-01-29)
+
+### Bug Fixes
+
+- **deps:** bump sort-package-json from 2.6.0 to 2.7.0
+  ([#296](https://github.com/hongaar/moker/issues/296))
+  ([47cd8fa](https://github.com/hongaar/moker/commit/47cd8fa116cf8c0ae380321777d383b9f95ac855))
+
+## [2.1.5](https://github.com/hongaar/moker/compare/v2.1.4...v2.1.5) (2023-12-25)
+
+### Bug Fixes
+
+- **deps:** bump ora from 7.0.1 to 8.0.1
+  ([#287](https://github.com/hongaar/moker/issues/287))
+  ([7448d53](https://github.com/hongaar/moker/commit/7448d5312327bc384c4517e050d8269f600655de))
+
+## [2.1.4](https://github.com/hongaar/moker/compare/v2.1.3...v2.1.4) (2023-11-27)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.12 to 1.12.13
+  ([#276](https://github.com/hongaar/moker/issues/276))
+  ([188d042](https://github.com/hongaar/moker/commit/188d04210d93ab8ef6d304afd5f2c5655b7b5982))
+
+## [2.1.3](https://github.com/hongaar/moker/compare/v2.1.2...v2.1.3) (2023-11-13)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.11 to 1.12.12
+  ([#270](https://github.com/hongaar/moker/issues/270))
+  ([564b0e1](https://github.com/hongaar/moker/commit/564b0e17e90591037186ad828b3cdfebeecdf136))
+
+## [2.1.2](https://github.com/hongaar/moker/compare/v2.1.1...v2.1.2) (2023-11-06)
+
+### Bug Fixes
+
+- **deps:** bump pkg-up from 4.0.0 to 5.0.0
+  ([#264](https://github.com/hongaar/moker/issues/264))
+  ([3ccb515](https://github.com/hongaar/moker/commit/3ccb515c850a9e7dd5b3548ff2f117aa9878e2f3))
+- **deps:** bump yaml from 2.3.3 to 2.3.4
+  ([#266](https://github.com/hongaar/moker/issues/266))
+  ([c0b6d37](https://github.com/hongaar/moker/commit/c0b6d37cc92098f29a2b9f7962df7420bc82f31a))
+
+## [2.1.1](https://github.com/hongaar/moker/compare/v2.1.0...v2.1.1) (2023-10-29)
+
+### Bug Fixes
+
+- typo
+  ([2ca1ac4](https://github.com/hongaar/moker/commit/2ca1ac4178d1d829ba93aad30c197d5e220bb9d2))
+
+# [2.1.0](https://github.com/hongaar/moker/compare/v2.0.7...v2.1.0) (2023-10-29)
+
+### Bug Fixes
+
+- --worktree to --all ([#262](https://github.com/hongaar/moker/issues/262))
+  ([5e153d5](https://github.com/hongaar/moker/commit/5e153d5eb617e669712edb8c0e7332cf2cae6604))
+
+### Features
+
+- yarn 4 ([#261](https://github.com/hongaar/moker/issues/261))
+  ([c2657f3](https://github.com/hongaar/moker/commit/c2657f3c6e9a71d0c69c78a6a0f7287755fc62c3))
+
+## [2.0.7](https://github.com/hongaar/moker/compare/v2.0.6...v2.0.7) (2023-10-23)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.9 to 1.12.11
+  ([#256](https://github.com/hongaar/moker/issues/256))
+  ([e7104c2](https://github.com/hongaar/moker/commit/e7104c283ccf75b8ef7fe557e6af0db147465334))
+
+## [2.0.6](https://github.com/hongaar/moker/compare/v2.0.5...v2.0.6) (2023-10-16)
+
+### Bug Fixes
+
+- **deps:** bump yaml from 2.3.2 to 2.3.3
+  ([#252](https://github.com/hongaar/moker/issues/252))
+  ([484589b](https://github.com/hongaar/moker/commit/484589bd9d85d2db62e9542d8cb0725e897bd1c5))
+
+## [2.0.5](https://github.com/hongaar/moker/compare/v2.0.4...v2.0.5) (2023-10-09)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.8 to 1.12.9
+  ([#251](https://github.com/hongaar/moker/issues/251))
+  ([ffd902f](https://github.com/hongaar/moker/commit/ffd902ff94c15bc7ed5825986f7fe095bee7b273))
+
+## [2.0.4](https://github.com/hongaar/moker/compare/v2.0.3...v2.0.4) (2023-10-02)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.7 to 1.12.8
+  ([#247](https://github.com/hongaar/moker/issues/247))
+  ([2e021a5](https://github.com/hongaar/moker/commit/2e021a5b13b9fb94e74a96cf32062487b5543e90))
+
+## [2.0.3](https://github.com/hongaar/moker/compare/v2.0.2...v2.0.3) (2023-10-02)
+
+### Bug Fixes
+
+- **deps:** bump sort-package-json from 2.5.1 to 2.6.0
+  ([#248](https://github.com/hongaar/moker/issues/248))
+  ([e2d5ee2](https://github.com/hongaar/moker/commit/e2d5ee21f5943d8f95c40db1831cf0e002e8dedc))
+
+## [2.0.2](https://github.com/hongaar/moker/compare/v2.0.1...v2.0.2) (2023-10-02)
+
+### Bug Fixes
+
+- **template:sanity:** no tailwindcss (2)
+  ([cd9f0ba](https://github.com/hongaar/moker/commit/cd9f0ba15dd4a9aa5715a79695a45e063fe24143))
+
+## [2.0.1](https://github.com/hongaar/moker/compare/v2.0.0...v2.0.1) (2023-10-02)
+
+### Bug Fixes
+
+- **template:sanity:** no tailwindcss by default
+  ([3f37c26](https://github.com/hongaar/moker/commit/3f37c26e0b160320c021e7ee02aa9f25efdda1fe))
+
+# [2.0.0](https://github.com/hongaar/moker/compare/v1.8.1...v2.0.0) (2023-09-28)
+
+- feat!: typescript build / project references (#245)
+  ([220305b](https://github.com/hongaar/moker/commit/220305b34bec8cd243d2a7878bb20e197477f205)),
+  closes [#245](https://github.com/hongaar/moker/issues/245)
+
+### BREAKING CHANGES
+
+- typescript plugin now uses project references to use new tsc --build mode
+
+## [1.8.1](https://github.com/hongaar/moker/compare/v1.8.0...v1.8.1) (2023-09-28)
+
+### Bug Fixes
+
+- trigger release
+  ([a2d1b93](https://github.com/hongaar/moker/commit/a2d1b930c6a76f74e178be04b0fad9f9daed2431))
+
+# [1.8.0](https://github.com/hongaar/moker/compare/v1.7.0...v1.8.0) (2023-09-27)
+
+### Features
+
+- remove tap from test plugin
+  ([967b466](https://github.com/hongaar/moker/commit/967b466fbf43f0bf1df283bec7cd73b801ef5d62))
+
+# [1.7.0](https://github.com/hongaar/moker/compare/v1.6.2...v1.7.0) (2023-09-26)
+
+### Features
+
+- next and sanity templates
+  ([c8fc20d](https://github.com/hongaar/moker/commit/c8fc20d3ac3ef4fa4b18959cada6eae1f6ed27df))
+
+## [1.6.2](https://github.com/hongaar/moker/compare/v1.6.1...v1.6.2) (2023-09-25)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.6 to 1.12.7
+  ([#241](https://github.com/hongaar/moker/issues/241))
+  ([eac185d](https://github.com/hongaar/moker/commit/eac185d1b17cfa075e1d7be0fb882e4daccd184d))
+
+## [1.6.1](https://github.com/hongaar/moker/compare/v1.6.0...v1.6.1) (2023-09-24)
+
+### Bug Fixes
+
+- test plugin
+  ([a10f642](https://github.com/hongaar/moker/commit/a10f64284f793982fbd4249b02b9138ec147e285))
+
+# [1.6.0](https://github.com/hongaar/moker/compare/v1.5.1...v1.6.0) (2023-09-24)
+
+### Features
+
+- remove test dependency ([#239](https://github.com/hongaar/moker/issues/239))
+  ([08f47b3](https://github.com/hongaar/moker/commit/08f47b3cc833007c01f3eebb141f021c66890eca))
+
+## [1.5.1](https://github.com/hongaar/moker/compare/v1.5.0...v1.5.1) (2023-09-24)
+
+### Bug Fixes
+
+- **deps:** bump semver from 6.3.0 to 6.3.1
+  ([#237](https://github.com/hongaar/moker/issues/237))
+  ([2adcb02](https://github.com/hongaar/moker/commit/2adcb025a740905d0ba34ba140e5112ee927aeca))
+
+# [1.5.0](https://github.com/hongaar/moker/compare/v1.4.1...v1.5.0) (2023-09-24)
+
+### Features
+
+- update node.js versions ([#232](https://github.com/hongaar/moker/issues/232))
+  ([710408f](https://github.com/hongaar/moker/commit/710408f61834dc9f306424028339db5dd882903e))
+
+## [1.4.1](https://github.com/hongaar/moker/compare/v1.4.0...v1.4.1) (2023-09-18)
+
+### Bug Fixes
+
+- **deps:** bump hosted-git-info from 7.0.0 to 7.0.1
+  ([#233](https://github.com/hongaar/moker/issues/233))
+  ([5119feb](https://github.com/hongaar/moker/commit/5119feb06245efb197b9b28e62ed3f4a37716fcf))
+
+# [1.4.0](https://github.com/hongaar/moker/compare/v1.3.10...v1.4.0) (2023-09-09)
+
+### Features
+
+- dependency-review ([#231](https://github.com/hongaar/moker/issues/231))
+  ([fe4070c](https://github.com/hongaar/moker/commit/fe4070c8196c71dacbfbfed8c42dfe020de95316))
+
+## [1.3.10](https://github.com/hongaar/moker/compare/v1.3.9...v1.3.10) (2023-08-28)
+
+### Bug Fixes
+
+- **deps:** bump yaml from 2.3.1 to 2.3.2
+  ([#224](https://github.com/hongaar/moker/issues/224))
+  ([839c701](https://github.com/hongaar/moker/commit/839c701447a907da57b0c13b417836d5c3fd2264))
+
+## [1.3.9](https://github.com/hongaar/moker/compare/v1.3.8...v1.3.9) (2023-08-21)
+
+### Bug Fixes
+
+- **deps:** bump hosted-git-info from 6.1.1 to 7.0.0
+  ([#218](https://github.com/hongaar/moker/issues/218))
+  ([90e074b](https://github.com/hongaar/moker/commit/90e074bfcf1b883cc972599c186d36e4fba600ff))
+
+## [1.3.8](https://github.com/hongaar/moker/compare/v1.3.7...v1.3.8) (2023-08-07)
+
+### Bug Fixes
+
+- **deps:** bump ora from 7.0.0 to 7.0.1
+  ([#214](https://github.com/hongaar/moker/issues/214))
+  ([039643f](https://github.com/hongaar/moker/commit/039643f511fe9805754e987aaf21bdc2fb04b409))
+
+## [1.3.7](https://github.com/hongaar/moker/compare/v1.3.6...v1.3.7) (2023-07-31)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.5 to 1.12.6
+  ([#211](https://github.com/hongaar/moker/issues/211))
+  ([d55e72c](https://github.com/hongaar/moker/commit/d55e72cbbea8824d5dfb4d7e8e645668b796b3b0))
+
+## [1.3.6](https://github.com/hongaar/moker/compare/v1.3.5...v1.3.6) (2023-07-31)
+
+### Bug Fixes
+
+- **deps:** bump ora from 6.3.1 to 7.0.0
+  ([#209](https://github.com/hongaar/moker/issues/209))
+  ([62e1aef](https://github.com/hongaar/moker/commit/62e1aefbbf64790268429b9df3e6e1339c342f58))
+
+## [1.3.5](https://github.com/hongaar/moker/compare/v1.3.4...v1.3.5) (2023-07-17)
+
+### Bug Fixes
+
+- **deps:** bump bandersnatch from 1.12.4 to 1.12.5
+  ([#204](https://github.com/hongaar/moker/issues/204))
+  ([9ab6206](https://github.com/hongaar/moker/commit/9ab62068e9e8bebef41c4a198cd50fe089a8fffe))
+
+## [1.3.4](https://github.com/hongaar/moker/compare/v1.3.3...v1.3.4) (2023-07-11)
+
+### Bug Fixes
+
+- **deps:** bump semver from 5.7.1 to 5.7.2
+  ([#203](https://github.com/hongaar/moker/issues/203))
+  ([0d17ffd](https://github.com/hongaar/moker/commit/0d17ffde9087351b4c2811ddff30aff396759dea))
+
+## [1.3.3](https://github.com/hongaar/moker/compare/v1.3.2...v1.3.3) (2023-07-10)
+
+### Bug Fixes
+
+- **deps:** bump sort-package-json from 2.5.0 to 2.5.1
+  ([#200](https://github.com/hongaar/moker/issues/200))
+  ([239a35f](https://github.com/hongaar/moker/commit/239a35fbe07e0c32b62def14b6fcc4d386c46063))
+
+## [1.3.2](https://github.com/hongaar/moker/compare/v1.3.1...v1.3.2) (2023-07-03)
+
+### Bug Fixes
+
+- **deps:** bump chalk from 5.2.0 to 5.3.0
+  ([#192](https://github.com/hongaar/moker/issues/192))
+  ([273de12](https://github.com/hongaar/moker/commit/273de122fecc2a3a58770b6bf98ffdf83e78a332))
+
+## [1.3.1](https://github.com/hongaar/moker/compare/v1.3.0...v1.3.1) (2023-07-03)
+
+### Bug Fixes
+
+- **deps:** bump sort-package-json from 2.4.1 to 2.5.0
+  ([#195](https://github.com/hongaar/moker/issues/195))
+  ([289d7ec](https://github.com/hongaar/moker/commit/289d7ecde68c7066e77d7babe3999e3b7974924f))
+
 # [1.3.0](https://github.com/hongaar/moker/compare/v1.2.6...v1.3.0) (2023-06-02)
 
 ### Features

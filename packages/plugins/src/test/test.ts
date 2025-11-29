@@ -12,18 +12,12 @@ import {
 async function install({ directory }: PluginArgs) {
   const monorepoDirectory = await getMonorepoDirectory({ directory });
 
-  enqueueInstallDependency({
-    directory,
-    identifier: ["test", "tap"],
-    dev: true,
-  });
-
   if (!hasPlugin({ directory, name: "typescript" })) {
     await writePackage({
       directory,
       data: {
         scripts: {
-          test: "node--test | tap --no-coverage",
+          test: "node --test",
         },
       },
     });
@@ -38,7 +32,7 @@ async function install({ directory }: PluginArgs) {
       directory,
       data: {
         scripts: {
-          test: "NODE_OPTIONS='--loader=ts-node/esm --no-warnings' node--test test/*.test.ts | NODE_OPTIONS='--loader=ts-node/esm --no-warnings' tap --no-coverage",
+          test: "NODE_OPTIONS='--loader=ts-node/esm --no-warnings' node --test test/*.test.ts",
         },
       },
     });
@@ -49,7 +43,7 @@ async function install({ directory }: PluginArgs) {
       directory: monorepoDirectory,
       data: {
         scripts: {
-          test: "yarn workspaces foreach --topological --verbose run test",
+          test: "yarn workspaces foreach --all --topological --verbose run test",
         },
       },
     });
@@ -57,7 +51,7 @@ async function install({ directory }: PluginArgs) {
 }
 
 async function remove({ directory }: PluginArgs) {
-  enqueueRemoveDependency({ directory, identifier: ["test", "ts-node"] });
+  enqueueRemoveDependency({ directory, identifier: ["ts-node"] });
 
   warning("Please review package.json manually");
 }

@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import ora from "ora";
+import ora, { type Ora } from "ora";
 
 type Log =
   | {
@@ -11,6 +11,7 @@ type Log =
       type: "error";
     };
 
+let tasks: Ora[] = [];
 let messages: Log[];
 let encounteredErrors: boolean;
 
@@ -18,7 +19,7 @@ resetState();
 
 export function log(
   message: string,
-  type: "debug" | "info" | "warning" = "info"
+  type: "debug" | "info" | "warning" = "info",
 ) {
   messages.push({ message, type });
 }
@@ -80,37 +81,43 @@ export async function flushLogs() {
     type === "warning"
       ? writeWarning(message)
       : type === "debug"
-      ? writeDebug(message)
-      : type === "error"
-      ? writeError(message)
-      : writeInfo(message);
+        ? writeDebug(message)
+        : type === "error"
+          ? writeError(message)
+          : writeInfo(message);
   }
   resetMessages();
 }
 
-export async function task<T>(title: string, callback: () => Promise<T>) {
+export async function task<T>(
+  title: string,
+  callback: (spinner: Ora) => Promise<T>,
+) {
   const spinner = ora(title).start();
   let result: T;
+  let error: any;
+
+  tasks.push(spinner);
 
   try {
-    result = await callback();
-  } catch (error: any) {
-    spinner.fail();
-    logError(error);
-    flushLogs();
-
-    return [null, error as Error] as const;
+    result = await callback(spinner);
+  } catch (err: any) {
+    error = err;
+    logError(err);
   }
 
-  if (messages.filter(({ type }) => type === "warning").length > 0) {
+  if (error) {
+    spinner.fail();
+  } else if (messages.filter(({ type }) => type === "warning").length > 0) {
     spinner.warn();
   } else {
     spinner.succeed();
   }
 
   flushLogs();
+  tasks = tasks.filter((task) => task !== spinner);
 
-  return [result, null] as const;
+  return error ? ([null, error as Error] as const) : ([result!, null] as const);
 }
 
 export function getMessages() {
@@ -123,4 +130,8 @@ export function containsMessage(search: string) {
 
 export function hasEncounteredErrors() {
   return encounteredErrors;
+}
+
+export function getLastTask() {
+  return tasks[tasks.length - 1];
 }

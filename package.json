@@ -10,16 +10,19 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach --topological --verbose run build",
-    "build:watch": "yarn workspaces foreach --parallel --interlaced run build:watch",
+    "build": "yarn workspaces foreach --all --topological --verbose run build",
+    "build:clean": "yarn workspaces foreach --all --topological --verbose run build:clean",
+    "build:watch": "yarn workspaces foreach --all --parallel --jobs unlimited --interlaced run build:watch",
     "doctoc": "doctoc README.md",
     "format": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check --ignore-unknown .",
     "postinstall": "husky install",
     "release": "semantic-release",
     "start": "node packages/cli/moker.js",
-    "test": "yarn workspaces foreach --topological --verbose run test",
-    "todos": "leasot --exit-nicely --reporter markdown --ignore \"**/node_modules\" \"**/*.ts\" > TODO.md"
+    "test": "yarn workspaces foreach --all --topological --verbose run test",
+    "todos": "leasot --exit-nicely --reporter markdown --ignore \"**/node_modules\" \"**/*.ts\" > TODO.md",
+    "typescript": "yarn build:clean && tsc --build --force",
+    "typescript:watch": "tsc --build --watch"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
@@ -28,16 +31,17 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/prettier": "^2.7.2",
+    "@types/prettier": "^3.0.0",
     "doctoc": "2.2.1",
-    "husky": "8.0.3",
+    "husky": "9.0.11",
     "leasot": "13.3.0",
-    "lint-staged": "13.2.2",
-    "prettier": "2.8.8",
-    "semantic-release": "21.0.2",
-    "semantic-release-yarn": "1.0.0"
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "semantic-release": "23.0.8",
+    "semantic-release-yarn": "3.0.2",
+    "typescript": "5.4.5"
   },
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@4.0.1",
   "moker": {
     "scoped": true,
     "plugins": [

@@ -27,7 +27,7 @@ async function apply({ directory }: TemplateArgs) {
     ],
     {
       cwd: dirname(directory),
-    }
+    },
   );
 
   // Weird problem where we are left with a package-lock.json file after installation
@@ -40,7 +40,8 @@ async function apply({ directory }: TemplateArgs) {
   await writePackage({ directory, data: oldPackage });
 }
 
+// @todo repo not supported atm, because we'd need to restore yarn and git state
 export const cra = {
-  type: PluginType.RepoOrWorkspace,
+  type: PluginType.Workspace,
   apply,
 };

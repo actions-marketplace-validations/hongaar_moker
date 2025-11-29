@@ -10,6 +10,7 @@ type DirOption = {
 };
 
 const DEFAULT_INITIAL_VERSION = "0.0.0";
+const README_FILENAME = "README.md";
 
 export async function addWorkspace({
   directory,
@@ -21,7 +22,7 @@ export async function addWorkspace({
   const pkgName = pkg.name;
   const workspaceDirectory = join(
     getWorkspacesDirectory({ pkg, directory }),
-    name
+    name,
   );
   const isScoped = getScoped({ pkg });
 
@@ -60,7 +61,7 @@ export async function writeReadme({
   name,
 }: DirOption & { name?: string }) {
   await writeFile({
-    path: join(directory, "README.md"),
+    path: join(directory, README_FILENAME),
     contents: `# ${name ?? basename(directory)}`,
   });
 }
