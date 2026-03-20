@@ -10,7 +10,7 @@ jobs:
     if: |
       github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
       - uses: hongaar/moker@v2
       - uses: peter-evans/create-pull-request@v6
         with:
